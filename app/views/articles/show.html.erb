@@ -1,0 +1,13 @@
+<h2><%= @article.title %> - <%= @article.created_at.to_s(:short) %></h2>
+<p>
+  <%= @article.content %>
+</p>
+<p>
+  <%= link_to 'edit article', edit_article_path %>
+</p>
+<p>
+  <%= link_to 'delete article', article_destroy_path(@article.id), method: :delete %>
+</p>
+<p>
+  <%= link_to 'back to articles list', articles_path %>
+</p>
